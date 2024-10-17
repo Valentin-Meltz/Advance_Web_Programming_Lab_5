@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+        <header class="navbar">
+            <nav class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="excel.html">Excel</a>
+                
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <div id="title" class="heading">Sign In</div>
+
+                <div id="input_div">
+                    <form class="form">
+                        <input id="firstName" type="text" class="input" placeholder="First Name">
+                        <input id="lastName" type="text" class="input" placeholder="Last Name">
+                        <input id="emailAdress" type="email" class="input" placeholder="Email address">
+                        <input id="adress" type="text" class="input" placeholder="Address">
+                        <input id="city" type="text" class="input" placeholder="City">
+                        <input id="province" type="text" class="input" placeholder="Province">
+                        <div class="radio-container">
+                            <label class="radio">
+                                <input id="radio-premium" type="radio" name="radio" value="premium" checked>
+                                <span class="name">Premium Membership</span>
+                            </label>
+
+                            <label class="radio">
+                                <input type="radio" name="radio" value="standard">
+                                <span class="name">Standard Membership</span>
+                            </label>
+                                
+                            <label class="radio">
+                                <input type="radio" name="radio" value="basic">
+                                <span class="name">Basic Membership</span>
+                            </label>
+                        </div>
+                        <div class="btn-container">
+                            <button id="btn-cancel" class="form-btn">Cancel</button>
+                        </div>
+                    </form>
+
+                    <div class="btn-container">
+                        <button id="btn-login" class="form-btn">Log in</button>
+                    </div>
+                </div>
+
+                <div id="output_div">
+                    <input id="output-fullName" type="text" class="input">
+                    <input id="output-email" type="text" class="input">
+                    <input id="output-adress" type="email" class="input">
+                    <input id="output-membership" type="text" class="input">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>ILAC & EFREI - HTML, CSS, and JavaScript Assignment - Valentin Meltz</p>
+        </footer>
+
+        <script src="javascript/main.js"></script>
+</body>
+</html>

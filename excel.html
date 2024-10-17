@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="excel.html">Excel</a>
+            
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="heading">Excel</div>
+            <form class="form">
+                <input id="numbers" type="text" class="input" placeholder="Enter your numbers separated by spaces:">
+                <div class="radio-container">
+                    <div class="radio-input">
+                        <input type="radio" id="sum" name="value-radio" value="1" checked>
+                        <label for="sum">AutoSum</label>
+                        
+                        <input type="radio" id="avg" name="value-radio" value="2">
+                        <label for="avg">Average</label>
+                        
+                        <input type="radio" id="max" name="value-radio" value="3">
+                        <label for="max">Max</label>
+                        
+                        <input type="radio" id="min" name="value-radio" value="4">
+                        <label for="min">Min</label>
+                    </div>
+                </div>
+            </form>
+            <div class="btn-container">
+                <button id="btn-calculate" class="form-btn">Calculate</button>
+            </div>
+            <input id="result" type="text" class="input" placeholder="Result :">
+        </div>
+    </main>
+
+    <footer>
+        <p>ILAC & EFREI - HTML, CSS, and JavaScript Assignment - Valentin Meltz</p>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+</body>
+</html>

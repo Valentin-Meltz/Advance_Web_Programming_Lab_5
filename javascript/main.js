@@ -1,3 +1,56 @@
+
+const themeButton = document.querySelector('.Btn');
+const moonIcon = document.getElementById('icon-moon');
+
+let isBlueTheme = localStorage.getItem('theme') === 'blue' || localStorage.getItem('theme') === null;
+
+function toggleTheme(){
+        if (isBlueTheme) {
+            themeButton.style.backgroundColor = '#fa0202';
+            document.querySelector('.navbar-nav').style.backgroundColor = '#d31010';
+            document.querySelector('.heading').style.color = '#d31010';
+            document.querySelectorAll('.form-btn').forEach(btn => {
+                btn.style.background = 'linear-gradient(45deg, #d31010 0%, #fa4a4a 100%)';
+            });
+            document.querySelectorAll('.input').forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.style.color = '#fa0202';
+                    input.style.borderInlineColor = '#fa0202';
+                })
+                input.addEventListener('blur', () => {
+                    input.style.borderInlineColor = 'transparent';
+                });
+            });
+            document.querySelectorAll('.radio-container .radio input + name').forEach(radio => {
+                radio.addEventListener('checked', function() {
+                    radio.style.color = '#fa0202';
+                });
+            });
+
+            localStorage.setItem('theme', 'red');
+        } else {
+            themeButton.style.backgroundColor = '#1089d3';
+            document.querySelector('.navbar-nav').style.backgroundColor = '#1088d3';
+            document.querySelector('.heading').style.color = '#1089d3';
+            document.querySelectorAll('.form-btn').forEach(btn => {
+                btn.style.background = 'linear-gradient(45deg, #1089d3 0%, #12b1d1 100%)';
+            });
+            document.querySelectorAll('.input').forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.style.color = '#12b1d1';
+                    input.style.borderInlineColor = '#12b1d1';
+                })
+                input.addEventListener('blur', () => {
+                    input.style.borderInlineColor = 'transparent';
+                });
+            });
+
+            localStorage.setItem('theme', 'blue');
+        }
+        isBlueTheme = !isBlueTheme;
+}
+themeButton.addEventListener("click", toggleTheme);
+
 if(document.getElementById("btn-calculate")){
     const btn_calculate = document.getElementById("btn-calculate");
     btn_calculate.addEventListener("click", () => {
@@ -79,3 +132,16 @@ if(document.getElementById("btn-login")){
         output_membership.value = selectedValue + " membership";
     });
 }
+
+
+function applySavedTheme() {
+    if (localStorage.getItem('theme') === 'blue') {
+        isBlueTheme = false;
+        toggleTheme();
+    } else {
+        isBlueTheme = true;
+        toggleTheme();
+    }
+}
+
+applySavedTheme();

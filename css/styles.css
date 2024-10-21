@@ -114,7 +114,6 @@ main{
 }
 
 .radio-container .radio input:checked + .name {
-    color: #1089d3;
     background-color: #ffffff;
     font-weight: 600;
 }
@@ -255,11 +254,37 @@ main{
 }
 
 .radio-input input:checked + label {
-    background-color: #18181821;
-    color: #1088d3;    
+    background-color: #18181821;  
     border: 1px solid #bbb;
 }
 
 footer{
     text-align: center;
+}
+
+/* css for theme */
+.container-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.Btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1089d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+}
+
+.moon{
+    color: #000000;
+    font-size: 20px;
 }
